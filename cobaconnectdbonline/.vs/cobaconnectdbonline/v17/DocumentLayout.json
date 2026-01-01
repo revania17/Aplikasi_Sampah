@@ -1,0 +1,279 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\formdatauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\formdatauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\formdatauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\formdatauser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\formkabupatenkota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\formkabupatenkota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\formkabupatenkota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\formkabupatenkota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\formpetugas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\formpetugas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\formregis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\formregis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\formregis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\formregis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\models\\kabupatenkota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\models\\kabupatenkota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|c:\\users\\nabil\\documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{778801B8-4635-4F02-B5A3-DF2FCE102EF3}|cobaconnectdbonline\\cobaconnectdbonline.csproj|solutionrelative:cobaconnectdbonline\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 51,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 333,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FormDataUser.cs",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormDataUser.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\FormDataUser.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormDataUser.cs",
+              "RelativeToolTip": "cobaconnectdbonline\\FormDataUser.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAqwLMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T16:15:36.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FormKabupatenKota.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormKabupatenKota.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\FormKabupatenKota.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormKabupatenKota.cs [Design]",
+              "RelativeToolTip": "cobaconnectdbonline\\FormKabupatenKota.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T15:42:32.412Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormDataUser.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormDataUser.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\FormDataUser.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormDataUser.cs [Design]",
+              "RelativeToolTip": "cobaconnectdbonline\\FormDataUser.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T16:10:06.866Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormKabupatenKota.cs",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormKabupatenKota.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\FormKabupatenKota.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormKabupatenKota.cs",
+              "RelativeToolTip": "cobaconnectdbonline\\FormKabupatenKota.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAqwIoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T15:48:50.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormAdmin.cs",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\FormAdmin.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormAdmin.cs",
+              "RelativeToolTip": "cobaconnectdbonline\\FormAdmin.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwC0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T15:42:56.232Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FormAdmin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormAdmin.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\FormAdmin.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormAdmin.cs [Design]",
+              "RelativeToolTip": "cobaconnectdbonline\\FormAdmin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T15:18:16.964Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FormPetugas.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormPetugas.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\FormPetugas.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormPetugas.cs [Design]",
+              "RelativeToolTip": "cobaconnectdbonline\\FormPetugas.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T15:19:32.156Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Program.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\Program.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Program.cs",
+              "RelativeToolTip": "cobaconnectdbonline\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T09:59:36.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FormRegis.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormRegis.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\FormRegis.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormRegis.cs [Design]",
+              "RelativeToolTip": "cobaconnectdbonline\\FormRegis.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T15:24:12.736Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "FormRegis.cs",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormRegis.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\FormRegis.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\FormRegis.cs",
+              "RelativeToolTip": "cobaconnectdbonline\\FormRegis.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAAADwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T15:25:24.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "KabupatenKota.cs",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Models\\KabupatenKota.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\Models\\KabupatenKota.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Models\\KabupatenKota.cs",
+              "RelativeToolTip": "cobaconnectdbonline\\Models\\KabupatenKota.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T15:03:50.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Database.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\Database.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Database.cs",
+              "RelativeToolTip": "cobaconnectdbonline\\Database.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T15:07:05.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Models\\User.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Models\\User.cs",
+              "RelativeToolTip": "cobaconnectdbonline\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T15:03:33.42Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Form1.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\Form1.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Form1.cs",
+              "RelativeToolTip": "cobaconnectdbonline\\Form1.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAowDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T10:08:34.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Form1.cs",
+              "RelativeDocumentMoniker": "cobaconnectdbonline\\Form1.cs",
+              "ToolTip": "C:\\Users\\nabil\\Documents\\c#\\cobaconnectdbonline\\cobaconnectdbonline\\Form1.cs [Design]",
+              "RelativeToolTip": "cobaconnectdbonline\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T09:59:27.847Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

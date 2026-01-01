@@ -29,5 +29,9 @@ namespace cobaconnectdbonline
 
         public IMongoCollection<JenisSampah> JenisSampah =>
             database.GetCollection<JenisSampah>("jenis_sampah");
+
+        public IMongoCollection<DataSampah> DataSampah =>
+            database.GetCollection<DataSampah>("data_sampah");
+
     }
 }

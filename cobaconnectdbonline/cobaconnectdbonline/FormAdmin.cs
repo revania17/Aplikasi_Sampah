@@ -52,5 +52,17 @@ namespace cobaconnectdbonline
             new FormJenisSampah().Show();
             this.Hide();
         }
+
+        private void btnDataSampah_Click(object sender, EventArgs e)
+        {
+            new FormDataSampah().Show();
+            this.Hide();
+        }
+
+        private void btnChatBot_Click(object sender, EventArgs e)
+        {
+            new FormChatbot().Show();
+            this.Hide();
+        }
     }
 }

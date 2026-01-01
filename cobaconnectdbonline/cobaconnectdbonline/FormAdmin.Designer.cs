@@ -32,11 +32,13 @@
             this.btnUser = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnJenisSampah = new System.Windows.Forms.Button();
+            this.btnDataSampah = new System.Windows.Forms.Button();
+            this.btnChatBot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnKabko
             // 
-            this.btnKabko.Location = new System.Drawing.Point(145, 208);
+            this.btnKabko.Location = new System.Drawing.Point(145, 171);
             this.btnKabko.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKabko.Name = "btnKabko";
             this.btnKabko.Size = new System.Drawing.Size(209, 52);
@@ -47,7 +49,7 @@
             // 
             // btnUser
             // 
-            this.btnUser.Location = new System.Drawing.Point(145, 91);
+            this.btnUser.Location = new System.Drawing.Point(145, 52);
             this.btnUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(209, 52);
@@ -69,7 +71,7 @@
             // 
             // btnJenisSampah
             // 
-            this.btnJenisSampah.Location = new System.Drawing.Point(145, 322);
+            this.btnJenisSampah.Location = new System.Drawing.Point(145, 284);
             this.btnJenisSampah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnJenisSampah.Name = "btnJenisSampah";
             this.btnJenisSampah.Size = new System.Drawing.Size(209, 52);
@@ -78,11 +80,35 @@
             this.btnJenisSampah.UseVisualStyleBackColor = true;
             this.btnJenisSampah.Click += new System.EventHandler(this.btnJenisSampah_Click);
             // 
+            // btnDataSampah
+            // 
+            this.btnDataSampah.Location = new System.Drawing.Point(145, 410);
+            this.btnDataSampah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDataSampah.Name = "btnDataSampah";
+            this.btnDataSampah.Size = new System.Drawing.Size(209, 52);
+            this.btnDataSampah.TabIndex = 4;
+            this.btnDataSampah.Text = "Data Sampah";
+            this.btnDataSampah.UseVisualStyleBackColor = true;
+            this.btnDataSampah.Click += new System.EventHandler(this.btnDataSampah_Click);
+            // 
+            // btnChatBot
+            // 
+            this.btnChatBot.Location = new System.Drawing.Point(460, 223);
+            this.btnChatBot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChatBot.Name = "btnChatBot";
+            this.btnChatBot.Size = new System.Drawing.Size(209, 52);
+            this.btnChatBot.TabIndex = 5;
+            this.btnChatBot.Text = "Chat Bot";
+            this.btnChatBot.UseVisualStyleBackColor = true;
+            this.btnChatBot.Click += new System.EventHandler(this.btnChatBot_Click);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.btnChatBot);
+            this.Controls.Add(this.btnDataSampah);
             this.Controls.Add(this.btnJenisSampah);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnUser);
@@ -101,5 +127,7 @@
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnJenisSampah;
+        private System.Windows.Forms.Button btnDataSampah;
+        private System.Windows.Forms.Button btnChatBot;
     }
 }

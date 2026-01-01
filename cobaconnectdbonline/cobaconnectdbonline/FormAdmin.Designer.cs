@@ -31,13 +31,15 @@
             this.btnKabko = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnJenisSampah = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnKabko
             // 
-            this.btnKabko.Location = new System.Drawing.Point(129, 166);
+            this.btnKabko.Location = new System.Drawing.Point(145, 208);
+            this.btnKabko.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKabko.Name = "btnKabko";
-            this.btnKabko.Size = new System.Drawing.Size(186, 42);
+            this.btnKabko.Size = new System.Drawing.Size(209, 52);
             this.btnKabko.TabIndex = 0;
             this.btnKabko.Text = "Data Kabupaten Kota";
             this.btnKabko.UseVisualStyleBackColor = true;
@@ -45,9 +47,10 @@
             // 
             // btnUser
             // 
-            this.btnUser.Location = new System.Drawing.Point(129, 73);
+            this.btnUser.Location = new System.Drawing.Point(145, 91);
+            this.btnUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(186, 42);
+            this.btnUser.Size = new System.Drawing.Size(209, 52);
             this.btnUser.TabIndex = 1;
             this.btnUser.Text = "Data Users";
             this.btnUser.UseVisualStyleBackColor = true;
@@ -55,22 +58,36 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(682, 42);
+            this.btnLogout.Location = new System.Drawing.Point(767, 52);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.Size = new System.Drawing.Size(84, 29);
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnJenisSampah
+            // 
+            this.btnJenisSampah.Location = new System.Drawing.Point(145, 322);
+            this.btnJenisSampah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnJenisSampah.Name = "btnJenisSampah";
+            this.btnJenisSampah.Size = new System.Drawing.Size(209, 52);
+            this.btnJenisSampah.TabIndex = 3;
+            this.btnJenisSampah.Text = "Data Jenis Sampah";
+            this.btnJenisSampah.UseVisualStyleBackColor = true;
+            this.btnJenisSampah.Click += new System.EventHandler(this.btnJenisSampah_Click);
+            // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.Controls.Add(this.btnJenisSampah);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnUser);
             this.Controls.Add(this.btnKabko);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormAdmin";
             this.Text = "FormAdmin";
             this.Load += new System.EventHandler(this.FormAdmin_Load);
@@ -83,5 +100,6 @@
         private System.Windows.Forms.Button btnKabko;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnJenisSampah;
     }
 }

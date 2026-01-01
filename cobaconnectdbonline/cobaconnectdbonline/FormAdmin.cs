@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MongoDB.Driver;
 
 namespace cobaconnectdbonline
 {
@@ -44,6 +45,12 @@ namespace cobaconnectdbonline
                 Form1 login = new Form1();
                 login.Show();
             }
+        }
+
+        private void btnJenisSampah_Click(object sender, EventArgs e)
+        {
+            new FormJenisSampah().Show();
+            this.Hide();
         }
     }
 }

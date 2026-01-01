@@ -16,7 +16,7 @@ namespace cobaconnectdbonline
         public Database()
         {
             client = new MongoClient(
-            "mongodb+srv://isi yg kalian");
+            "mongodb+srv://rahmaaul:Smp12345@sampah-cluster.6w4au7b.mongodb.net/?appName=Sampah-cluster");
 
             database = client.GetDatabase("db_sampah");
         }
@@ -26,5 +26,8 @@ namespace cobaconnectdbonline
 
         public IMongoCollection<KabupatenKota> Kabupaten =>
             database.GetCollection<KabupatenKota>("kabupaten_kota");
+
+        public IMongoCollection<JenisSampah> JenisSampah =>
+            database.GetCollection<JenisSampah>("jenis_sampah");
     }
 }

@@ -57,6 +57,9 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.Bson.1.0.3\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
+    </Reference>
     <Reference Include="SharpCompress, Version=0.30.1.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
       <HintPath>..\packages\SharpCompress.0.30.1\lib\net461\SharpCompress.dll</HintPath>
     </Reference>
@@ -163,6 +166,12 @@
     <Compile Include="FormDataUser.Designer.cs">
       <DependentUpon>FormDataUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormJenisSampah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJenisSampah.Designer.cs">
+      <DependentUpon>FormJenisSampah.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormKabupatenKota.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +190,7 @@
     <Compile Include="FormRegis.Designer.cs">
       <DependentUpon>FormRegis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\JenisSampah.cs" />
     <Compile Include="Models\KabupatenKota.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
@@ -193,6 +203,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDataUser.resx">
       <DependentUpon>FormDataUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJenisSampah.resx">
+      <DependentUpon>FormJenisSampah.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormKabupatenKota.resx">
       <DependentUpon>FormKabupatenKota.cs</DependentUpon>

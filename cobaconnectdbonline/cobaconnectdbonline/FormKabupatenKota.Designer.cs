@@ -40,16 +40,18 @@
             // 
             // txtNamaWilayah
             // 
-            this.txtNamaWilayah.Location = new System.Drawing.Point(160, 72);
+            this.txtNamaWilayah.Location = new System.Drawing.Point(136, 206);
+            this.txtNamaWilayah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNamaWilayah.Name = "txtNamaWilayah";
-            this.txtNamaWilayah.Size = new System.Drawing.Size(123, 22);
+            this.txtNamaWilayah.Size = new System.Drawing.Size(138, 26);
             this.txtNamaWilayah.TabIndex = 0;
             // 
             // btnTambah
             // 
-            this.btnTambah.Location = new System.Drawing.Point(12, 314);
+            this.btnTambah.Location = new System.Drawing.Point(47, 265);
+            this.btnTambah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(75, 23);
+            this.btnTambah.Size = new System.Drawing.Size(84, 29);
             this.btnTambah.TabIndex = 1;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = true;
@@ -58,28 +60,31 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 78);
+            this.label1.Location = new System.Drawing.Point(17, 209);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 16);
+            this.label1.Size = new System.Drawing.Size(114, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nama Wilayah:";
             // 
             // dgvWilayah
             // 
+            this.dgvWilayah.BackgroundColor = System.Drawing.Color.White;
             this.dgvWilayah.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWilayah.Location = new System.Drawing.Point(326, 78);
+            this.dgvWilayah.Location = new System.Drawing.Point(293, 52);
+            this.dgvWilayah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvWilayah.Name = "dgvWilayah";
             this.dgvWilayah.RowHeadersWidth = 51;
             this.dgvWilayah.RowTemplate.Height = 24;
-            this.dgvWilayah.Size = new System.Drawing.Size(463, 329);
+            this.dgvWilayah.Size = new System.Drawing.Size(552, 441);
             this.dgvWilayah.TabIndex = 3;
             this.dgvWilayah.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWilayah_CellContentClick);
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(123, 314);
+            this.btnEdit.Location = new System.Drawing.Point(146, 265);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.Size = new System.Drawing.Size(84, 29);
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -87,9 +92,10 @@
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Location = new System.Drawing.Point(14, 15);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(84, 29);
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Kembali";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -97,9 +103,10 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(67, 371);
+            this.btnRefresh.Location = new System.Drawing.Point(761, 15);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(75, 23);
+            this.btnRefresh.Size = new System.Drawing.Size(84, 29);
             this.btnRefresh.TabIndex = 6;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -107,9 +114,10 @@
             // 
             // FormKabupatenKota
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(875, 532);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnEdit);
@@ -117,6 +125,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTambah);
             this.Controls.Add(this.txtNamaWilayah);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormKabupatenKota";
             this.Text = "FormKabupatenKota";
             this.Load += new System.EventHandler(this.FormKabupatenKota_Load);

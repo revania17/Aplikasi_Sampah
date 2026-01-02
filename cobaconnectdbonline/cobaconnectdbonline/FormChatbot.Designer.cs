@@ -40,14 +40,14 @@
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(30, 359);
+            this.txtMessage.Location = new System.Drawing.Point(30, 447);
             this.txtMessage.Name = "txtMessage";
             this.txtMessage.Size = new System.Drawing.Size(478, 26);
             this.txtMessage.TabIndex = 1;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(602, 349);
+            this.btnSend.Location = new System.Drawing.Point(657, 437);
             this.btnSend.Name = "btnSend";
             this.btnSend.Size = new System.Drawing.Size(87, 36);
             this.btnSend.TabIndex = 2;
@@ -56,7 +56,7 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(599, 402);
+            this.btnClear.Location = new System.Drawing.Point(750, 437);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(96, 36);
             this.btnClear.TabIndex = 3;
@@ -74,16 +74,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(536, 20);
+            this.label1.Location = new System.Drawing.Point(577, 15);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(60, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Model :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(35, 402);
+            this.lblStatus.Location = new System.Drawing.Point(26, 503);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(41, 20);
             this.lblStatus.TabIndex = 6;
@@ -106,7 +107,7 @@
             this.chatPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.chatPanel.Location = new System.Drawing.Point(30, 54);
             this.chatPanel.Name = "chatPanel";
-            this.chatPanel.Size = new System.Drawing.Size(704, 276);
+            this.chatPanel.Size = new System.Drawing.Size(816, 377);
             this.chatPanel.TabIndex = 17;
             this.chatPanel.WrapContents = false;
             // 
@@ -114,7 +115,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(875, 532);
             this.Controls.Add(this.chatPanel);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblStatus);

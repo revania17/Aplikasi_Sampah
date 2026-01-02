@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
-
+using System.Drawing.Drawing2D;
 
 namespace cobaconnectdbonline
 {
@@ -145,18 +145,53 @@ namespace cobaconnectdbonline
                 Margin = new Padding(0)
             };
 
-            Label bubble = new Label
-            {
-                Text = text,
-                AutoSize = true,
-                MaximumSize = new Size(350, 0),
-                Padding = new Padding(10),
-                BackColor = isUser ? Color.LightBlue : Color.LightGray
-            };
+            Panel bubble = CreateRoundedBubble(text, isUser);
 
             row.Controls.Add(bubble);
             chatPanel.Controls.Add(row);
             chatPanel.ScrollControlIntoView(row);
+        }
+
+        private Panel CreateRoundedBubble(string text, bool isUser)
+        {
+            Color userColor = ColorTranslator.FromHtml("#f6d02d"); // kuning
+            Color botColor = ColorTranslator.FromHtml("#2e7040");  // hijau
+
+            Panel bubble = new Panel
+            {
+                AutoSize = true,
+                Padding = new Padding(12),
+                BackColor = isUser ? userColor : botColor,
+                MaximumSize = new Size(350, 0),
+                Margin = new Padding(5)
+            };
+
+            bubble.Paint += (s, e) =>
+            {
+                int radius = 18;
+                GraphicsPath path = new GraphicsPath();
+                Rectangle r = bubble.ClientRectangle;
+
+                path.AddArc(r.X, r.Y, radius, radius, 180, 90);
+                path.AddArc(r.Right - radius, r.Y, radius, radius, 270, 90);
+                path.AddArc(r.Right - radius, r.Bottom - radius, radius, radius, 0, 90);
+                path.AddArc(r.X, r.Bottom - radius, radius, radius, 90, 90);
+                path.CloseFigure();
+
+                bubble.Region = new Region(path);
+            };
+
+            Label lbl = new Label
+            {
+                Text = text,
+                AutoSize = true,
+                MaximumSize = new Size(320, 0),
+                ForeColor = isUser ? Color.Black : Color.White,
+                BackColor = Color.Transparent
+            };
+
+            bubble.Controls.Add(lbl);
+            return bubble;
         }
 
 
@@ -184,6 +219,11 @@ namespace cobaconnectdbonline
         {
             new FormAdmin().Show();
             this.Hide();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

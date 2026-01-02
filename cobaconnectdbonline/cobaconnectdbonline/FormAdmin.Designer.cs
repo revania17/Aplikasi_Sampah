@@ -34,11 +34,12 @@
             this.btnJenisSampah = new System.Windows.Forms.Button();
             this.btnDataSampah = new System.Windows.Forms.Button();
             this.btnChatBot = new System.Windows.Forms.Button();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // btnKabko
             // 
-            this.btnKabko.Location = new System.Drawing.Point(145, 171);
+            this.btnKabko.Location = new System.Drawing.Point(263, 43);
             this.btnKabko.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnKabko.Name = "btnKabko";
             this.btnKabko.Size = new System.Drawing.Size(209, 52);
@@ -49,7 +50,7 @@
             // 
             // btnUser
             // 
-            this.btnUser.Location = new System.Drawing.Point(145, 52);
+            this.btnUser.Location = new System.Drawing.Point(48, 43);
             this.btnUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(209, 52);
@@ -60,10 +61,10 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(767, 52);
+            this.btnLogout.Location = new System.Drawing.Point(41, 632);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(84, 29);
+            this.btnLogout.Size = new System.Drawing.Size(99, 34);
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -71,7 +72,7 @@
             // 
             // btnJenisSampah
             // 
-            this.btnJenisSampah.Location = new System.Drawing.Point(145, 284);
+            this.btnJenisSampah.Location = new System.Drawing.Point(478, 43);
             this.btnJenisSampah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnJenisSampah.Name = "btnJenisSampah";
             this.btnJenisSampah.Size = new System.Drawing.Size(209, 52);
@@ -82,7 +83,7 @@
             // 
             // btnDataSampah
             // 
-            this.btnDataSampah.Location = new System.Drawing.Point(145, 410);
+            this.btnDataSampah.Location = new System.Drawing.Point(702, 43);
             this.btnDataSampah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDataSampah.Name = "btnDataSampah";
             this.btnDataSampah.Size = new System.Drawing.Size(209, 52);
@@ -93,7 +94,7 @@
             // 
             // btnChatBot
             // 
-            this.btnChatBot.Location = new System.Drawing.Point(460, 223);
+            this.btnChatBot.Location = new System.Drawing.Point(715, 620);
             this.btnChatBot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnChatBot.Name = "btnChatBot";
             this.btnChatBot.Size = new System.Drawing.Size(209, 52);
@@ -102,11 +103,23 @@
             this.btnChatBot.UseVisualStyleBackColor = true;
             this.btnChatBot.Click += new System.EventHandler(this.btnChatBot_Click);
             // 
+            // panelMain
+            // 
+            this.panelMain.BackColor = System.Drawing.Color.White;
+            this.panelMain.Location = new System.Drawing.Point(41, 109);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(886, 504);
+            this.panelMain.TabIndex = 6;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            // 
             // FormAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(900, 562);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.BackgroundImage = global::cobaconnectdbonline.Properties.Resources.sampah4;
+            this.ClientSize = new System.Drawing.Size(954, 685);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.btnChatBot);
             this.Controls.Add(this.btnDataSampah);
             this.Controls.Add(this.btnJenisSampah);
@@ -129,5 +142,6 @@
         private System.Windows.Forms.Button btnJenisSampah;
         private System.Windows.Forms.Button btnDataSampah;
         private System.Windows.Forms.Button btnChatBot;
+        private System.Windows.Forms.Panel panelMain;
     }
 }

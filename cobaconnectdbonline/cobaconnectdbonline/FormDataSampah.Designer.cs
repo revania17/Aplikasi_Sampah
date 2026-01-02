@@ -51,7 +51,7 @@
             // cmbWilayah
             // 
             this.cmbWilayah.FormattingEnabled = true;
-            this.cmbWilayah.Location = new System.Drawing.Point(145, 55);
+            this.cmbWilayah.Location = new System.Drawing.Point(149, 102);
             this.cmbWilayah.Name = "cmbWilayah";
             this.cmbWilayah.Size = new System.Drawing.Size(121, 28);
             this.cmbWilayah.TabIndex = 0;
@@ -59,7 +59,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 58);
+            this.label1.Location = new System.Drawing.Point(26, 100);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 20);
             this.label1.TabIndex = 1;
@@ -68,7 +68,7 @@
             // cmbJenis
             // 
             this.cmbJenis.FormattingEnabled = true;
-            this.cmbJenis.Location = new System.Drawing.Point(145, 112);
+            this.cmbJenis.Location = new System.Drawing.Point(149, 136);
             this.cmbJenis.Name = "cmbJenis";
             this.cmbJenis.Size = new System.Drawing.Size(121, 28);
             this.cmbJenis.TabIndex = 2;
@@ -76,7 +76,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 115);
+            this.label2.Location = new System.Drawing.Point(22, 139);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 20);
             this.label2.TabIndex = 3;
@@ -84,15 +84,15 @@
             // 
             // txtJumlah
             // 
-            this.txtJumlah.Location = new System.Drawing.Point(145, 175);
+            this.txtJumlah.Location = new System.Drawing.Point(149, 175);
             this.txtJumlah.Name = "txtJumlah";
-            this.txtJumlah.Size = new System.Drawing.Size(100, 26);
+            this.txtJumlah.Size = new System.Drawing.Size(121, 26);
             this.txtJumlah.TabIndex = 4;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 175);
+            this.label3.Location = new System.Drawing.Point(26, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 20);
             this.label3.TabIndex = 5;
@@ -100,15 +100,15 @@
             // 
             // dtTanggal
             // 
-            this.dtTanggal.Location = new System.Drawing.Point(98, 238);
+            this.dtTanggal.Location = new System.Drawing.Point(149, 210);
             this.dtTanggal.Name = "dtTanggal";
-            this.dtTanggal.Size = new System.Drawing.Size(200, 26);
+            this.dtTanggal.Size = new System.Drawing.Size(121, 26);
             this.dtTanggal.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 238);
+            this.label4.Location = new System.Drawing.Point(26, 210);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 20);
             this.label4.TabIndex = 7;
@@ -116,15 +116,15 @@
             // 
             // txtPetugas
             // 
-            this.txtPetugas.Location = new System.Drawing.Point(145, 288);
+            this.txtPetugas.Location = new System.Drawing.Point(149, 243);
             this.txtPetugas.Name = "txtPetugas";
-            this.txtPetugas.Size = new System.Drawing.Size(100, 26);
+            this.txtPetugas.Size = new System.Drawing.Size(121, 26);
             this.txtPetugas.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 291);
+            this.label5.Location = new System.Drawing.Point(26, 249);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 20);
             this.label5.TabIndex = 9;
@@ -132,7 +132,7 @@
             // 
             // btnTambah
             // 
-            this.btnTambah.Location = new System.Drawing.Point(19, 343);
+            this.btnTambah.Location = new System.Drawing.Point(91, 315);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(81, 37);
             this.btnTambah.TabIndex = 10;
@@ -141,7 +141,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(217, 343);
+            this.btnEdit.Location = new System.Drawing.Point(44, 375);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(81, 37);
             this.btnEdit.TabIndex = 11;
@@ -150,7 +150,7 @@
             // 
             // btnHapus
             // 
-            this.btnHapus.Location = new System.Drawing.Point(117, 343);
+            this.btnHapus.Location = new System.Drawing.Point(149, 375);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(81, 37);
             this.btnHapus.TabIndex = 12;
@@ -159,9 +159,9 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(145, 401);
+            this.btnRefresh.Location = new System.Drawing.Point(677, 10);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(81, 37);
+            this.btnRefresh.Size = new System.Drawing.Size(75, 34);
             this.btnRefresh.TabIndex = 13;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
@@ -169,14 +169,15 @@
             // dgvDataSampah
             // 
             this.dgvDataSampah.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDataSampah.BackgroundColor = System.Drawing.Color.White;
             this.dgvDataSampah.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDataSampah.Location = new System.Drawing.Point(304, 24);
+            this.dgvDataSampah.Location = new System.Drawing.Point(282, 53);
             this.dgvDataSampah.Name = "dgvDataSampah";
             this.dgvDataSampah.ReadOnly = true;
             this.dgvDataSampah.RowHeadersWidth = 62;
             this.dgvDataSampah.RowTemplate.Height = 28;
             this.dgvDataSampah.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDataSampah.Size = new System.Drawing.Size(484, 403);
+            this.dgvDataSampah.Size = new System.Drawing.Size(581, 440);
             this.dgvDataSampah.TabIndex = 14;
             // 
             // btnBack
@@ -192,7 +193,7 @@
             // 
             // ExportButton
             // 
-            this.ExportButton.Location = new System.Drawing.Point(12, 401);
+            this.ExportButton.Location = new System.Drawing.Point(758, 12);
             this.ExportButton.Name = "ExportButton";
             this.ExportButton.Size = new System.Drawing.Size(105, 34);
             this.ExportButton.TabIndex = 16;
@@ -203,7 +204,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(875, 532);
             this.Controls.Add(this.ExportButton);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvDataSampah);

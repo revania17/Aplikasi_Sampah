@@ -42,7 +42,7 @@
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(60, 305);
+            this.btnRefresh.Location = new System.Drawing.Point(766, 13);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(84, 29);
@@ -62,29 +62,30 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(129, 259);
+            this.btnEdit.Location = new System.Drawing.Point(34, 262);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(84, 29);
+            this.btnEdit.Size = new System.Drawing.Size(95, 34);
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // dgvJenisSampah
             // 
+            this.dgvJenisSampah.BackgroundColor = System.Drawing.Color.White;
             this.dgvJenisSampah.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvJenisSampah.Location = new System.Drawing.Point(273, 13);
+            this.dgvJenisSampah.Location = new System.Drawing.Point(279, 50);
             this.dgvJenisSampah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvJenisSampah.Name = "dgvJenisSampah";
             this.dgvJenisSampah.RowHeadersWidth = 51;
             this.dgvJenisSampah.RowTemplate.Height = 24;
-            this.dgvJenisSampah.Size = new System.Drawing.Size(521, 411);
+            this.dgvJenisSampah.Size = new System.Drawing.Size(571, 417);
             this.dgvJenisSampah.TabIndex = 10;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 93);
+            this.label1.Location = new System.Drawing.Point(29, 178);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 20);
             this.label1.TabIndex = 9;
@@ -92,26 +93,26 @@
             // 
             // btnTambah
             // 
-            this.btnTambah.Location = new System.Drawing.Point(13, 259);
+            this.btnTambah.Location = new System.Drawing.Point(135, 262);
             this.btnTambah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(84, 29);
+            this.btnTambah.Size = new System.Drawing.Size(95, 36);
             this.btnTambah.TabIndex = 8;
             this.btnTambah.Text = "Tambah";
             this.btnTambah.UseVisualStyleBackColor = true;
             // 
             // txtKeterangan
             // 
-            this.txtKeterangan.Location = new System.Drawing.Point(126, 137);
+            this.txtKeterangan.Location = new System.Drawing.Point(135, 213);
             this.txtKeterangan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtKeterangan.Name = "txtKeterangan";
-            this.txtKeterangan.Size = new System.Drawing.Size(138, 26);
+            this.txtKeterangan.Size = new System.Drawing.Size(121, 26);
             this.txtKeterangan.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(20, 137);
+            this.label2.Location = new System.Drawing.Point(29, 211);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 20);
             this.label2.TabIndex = 14;
@@ -120,7 +121,7 @@
             // cmbJenisSampah
             // 
             this.cmbJenisSampah.FormattingEnabled = true;
-            this.cmbJenisSampah.Location = new System.Drawing.Point(129, 93);
+            this.cmbJenisSampah.Location = new System.Drawing.Point(135, 178);
             this.cmbJenisSampah.Name = "cmbJenisSampah";
             this.cmbJenisSampah.Size = new System.Drawing.Size(121, 28);
             this.cmbJenisSampah.TabIndex = 15;
@@ -129,7 +130,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(875, 532);
             this.Controls.Add(this.cmbJenisSampah);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnRefresh);

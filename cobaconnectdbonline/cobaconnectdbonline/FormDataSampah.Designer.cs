@@ -44,6 +44,7 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvDataSampah = new System.Windows.Forms.DataGridView();
             this.btnBack = new System.Windows.Forms.Button();
+            this.ExportButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDataSampah)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,7 +132,7 @@
             // 
             // btnTambah
             // 
-            this.btnTambah.Location = new System.Drawing.Point(29, 343);
+            this.btnTambah.Location = new System.Drawing.Point(19, 343);
             this.btnTambah.Name = "btnTambah";
             this.btnTambah.Size = new System.Drawing.Size(81, 37);
             this.btnTambah.TabIndex = 10;
@@ -140,7 +141,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(145, 343);
+            this.btnEdit.Location = new System.Drawing.Point(217, 343);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(81, 37);
             this.btnEdit.TabIndex = 11;
@@ -149,7 +150,7 @@
             // 
             // btnHapus
             // 
-            this.btnHapus.Location = new System.Drawing.Point(29, 401);
+            this.btnHapus.Location = new System.Drawing.Point(117, 343);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(81, 37);
             this.btnHapus.TabIndex = 12;
@@ -189,11 +190,21 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // ExportButton
+            // 
+            this.ExportButton.Location = new System.Drawing.Point(12, 401);
+            this.ExportButton.Name = "ExportButton";
+            this.ExportButton.Size = new System.Drawing.Size(105, 34);
+            this.ExportButton.TabIndex = 16;
+            this.ExportButton.Text = "Export PDF";
+            this.ExportButton.UseVisualStyleBackColor = true;
+            // 
             // FormDataSampah
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.ExportButton);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvDataSampah);
             this.Controls.Add(this.btnRefresh);
@@ -236,5 +247,6 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvDataSampah;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button ExportButton;
     }
 }

@@ -10,6 +10,11 @@ using System.Windows.Forms;
 using cobaconnectdbonline.Models;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.IO.Font.Constants;
+using iText.Kernel.Font;
 
 namespace cobaconnectdbonline
 {
@@ -27,6 +32,8 @@ namespace cobaconnectdbonline
             btnHapus.Click += btnHapus_Click;
             btnRefresh.Click += btnRefresh_Click;
             dgvDataSampah.CellClick += dgvDataSampah_CellClick;
+            ExportButton.Click += ExportButton_Click;       
+
         }
 
         private void FormDataSampah_Load(object sender, EventArgs e)
@@ -204,6 +211,110 @@ namespace cobaconnectdbonline
         {
             new FormAdmin().Show();
             this.Hide();
+        }
+        private void ExportButton_Click(object sender, EventArgs e)
+        {
+            if (dgvDataSampah.DataSource == null || dgvDataSampah.Rows.Count == 0)
+            {
+                MessageBox.Show("Tidak ada data untuk diekspor ke PDF.");
+                return;
+            }
+
+            var saveFileDialog = new SaveFileDialog
+            {
+                Filter = "PDF Files|*.pdf",
+                Title = "Simpan Laporan Data Sampah",
+                FileName = "Laporan_Sampah_" + DateTime.Now.ToString("yyyyMMdd")
+            };
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (PdfWriter writer = new PdfWriter(saveFileDialog.FileName))
+                    {
+                        using (PdfDocument pdf = new PdfDocument(writer))
+                        {
+                            Document document = new Document(pdf);
+
+                            // Menghitung jumlah kolom yang tampil (Visible) saja
+                            int visibleColumnCount = 0;
+                            foreach (DataGridViewColumn col in dgvDataSampah.Columns)
+                            {
+                                if (col.Name != "id_sampah") visibleColumnCount++;
+                            }
+
+                            Table table = new Table(visibleColumnCount);
+
+                            // 1. Membuat Header (Hanya kolom yang bukan id_sampah)
+                            foreach (DataGridViewColumn column in dgvDataSampah.Columns)
+                            {
+                                if (column.Name == "id_sampah") continue; // Lewati kolom ID
+
+                                Cell headerCell = new Cell().Add(new iText.Layout.Element.Paragraph(column.HeaderText));
+                                headerCell.SetBackgroundColor(iText.Kernel.Colors.ColorConstants.LIGHT_GRAY);
+                                table.AddHeaderCell(headerCell);
+                            }
+
+                            // 2. Mengambil Data (Hanya kolom yang bukan id_sampah)
+                            foreach (DataGridViewRow row in dgvDataSampah.Rows)
+                            {
+                                if (row.IsNewRow) continue;
+
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    // Cek berdasarkan nama kolom agar ID tidak terbawa
+                                    if (dgvDataSampah.Columns[cell.ColumnIndex].Name == "id_sampah") continue;
+
+                                    string cellValue = cell.Value?.ToString() ?? "";
+                                    table.AddCell(new Cell().Add(new iText.Layout.Element.Paragraph(cellValue)));
+                                }
+                            }
+
+                            document.Add(new iText.Layout.Element.Paragraph("LAPORAN DATA SAMPAH").SetFontSize(16));
+                            document.Add(table);
+                            document.Close();
+                        }
+                    }
+                    MessageBox.Show("PDF Berhasil dibuat tanpa kolom ID!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Gagal ekspor PDF: " + ex.Message, "Error");
+                }
+            }
+        }
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Perbaikan: Gunakan class Database() untuk mengambil koleksi
+            var db = new Database();
+            var documents = db.DataSampah.Find(new BsonDocument()).ToList();
+
+            DataTable dataTable = new DataTable();
+
+            if (documents.Count > 0)
+            {
+                // Kita ambil elemen dari dokumen pertama untuk jadi Header kolom
+                // Catatan: Ini menggunakan data mentah BsonDocument
+                foreach (var element in documents[0].ToBsonDocument().Elements)
+                {
+                    dataTable.Columns.Add(element.Name);
+                }
+            }
+
+            foreach (var doc in documents)
+            {
+                DataRow row = dataTable.NewRow();
+                var bsonDoc = doc.ToBsonDocument();
+                foreach (var element in bsonDoc.Elements)
+                {
+                    row[element.Name] = element.Value.ToString();
+                }
+                dataTable.Rows.Add(row);
+            }
+
+            // Perbaikan: Ganti dataGridView1 menjadi dgvDataSampah
+            dgvDataSampah.DataSource = dataTable;
         }
     }
 }

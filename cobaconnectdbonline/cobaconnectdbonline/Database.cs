@@ -16,7 +16,7 @@ namespace cobaconnectdbonline
         public Database()
         {
             client = new MongoClient(
-            "mongodb+srv://rahmaaul:Smp12345@sampah-cluster.6w4au7b.mongodb.net/?appName=Sampah-cluster");
+            "mongodb+srv://zahra:Smp12345@sampah-cluster.6w4au7b.mongodb.net/?appName=Sampah-cluster");
 
             database = client.GetDatabase("db_sampah");
         }

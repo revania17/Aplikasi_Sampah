@@ -22,6 +22,9 @@ namespace cobaconnectdbonline
         {
             InitializeComponent();
 
+            this.DoubleBuffered = true;
+            this.Dock = DockStyle.Fill;
+
             db = new Database();
 
             InitMap();
@@ -74,6 +77,8 @@ namespace cobaconnectdbonline
         {
             dgvPenjemputan.AutoGenerateColumns = false;
             dgvPenjemputan.Columns.Clear();
+
+            dgvPenjemputan.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             dgvPenjemputan.Columns.Add("Id", "ID");
             dgvPenjemputan.Columns["Id"].Visible = false;
@@ -287,6 +292,11 @@ namespace cobaconnectdbonline
             gMapControl1.Refresh();
 
             selectedId = null;
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

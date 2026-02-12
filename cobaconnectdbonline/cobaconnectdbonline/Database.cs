@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace cobaconnectdbonline
 {
@@ -20,6 +21,23 @@ namespace cobaconnectdbonline
             "mongodb+srv://zahra:Smp12345@sampah-cluster.6w4au7b.mongodb.net/?appName=Sampah-cluster");
 
             database = client.GetDatabase("db_sampah");
+        }
+
+        public async Task SeedAdmin()
+        {
+            var count = await Users.CountDocumentsAsync(u => true);
+            if (count == 0)
+            {
+                var admin = new User
+                {
+                    email = "admin@gmail.com",
+                    password = BCrypt.Net.BCrypt.HashPassword("admin123"),
+                    role = "Admin",
+                    nama = "Super Admin"
+                };
+                await Users.InsertOneAsync(admin);
+                MessageBox.Show("Database Kosong. Admin Default Berhasil Dibuat!");
+            }
         }
 
         public IMongoCollection<User> Users =>

@@ -266,59 +266,83 @@ namespace cobaconnectdbonline
 
         private void AddBubble(string text, bool isUser)
         {
-            FlowLayoutPanel row = new FlowLayoutPanel
+            Panel row = new Panel
             {
+                Width = chatPanel.ClientSize.Width - 30, 
+                Height = 0, 
                 AutoSize = true,
-                WrapContents = false,
-                FlowDirection = isUser ? FlowDirection.RightToLeft : FlowDirection.LeftToRight,
-                Dock = DockStyle.Top,
                 Padding = new Padding(10),
-                Margin = new Padding(0)
+                Margin = new Padding(0, 5, 0, 5),
+                Dock = DockStyle.Bottom
             };
 
             Panel bubble = CreateRoundedBubble(text, isUser);
 
+            if (isUser)
+            {
+                bubble.Left = row.Width - bubble.Width - 20; 
+                bubble.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            }
+            else
+            {
+                bubble.Left = 20; 
+                bubble.Anchor = AnchorStyles.Top | AnchorStyles.Left;
+            }
+
             row.Controls.Add(bubble);
+
             chatPanel.Controls.Add(row);
+
+            chatPanel.VerticalScroll.Value = chatPanel.VerticalScroll.Maximum;
             chatPanel.ScrollControlIntoView(row);
         }
 
         private Panel CreateRoundedBubble(string text, bool isUser)
         {
-            Color userColor = ColorTranslator.FromHtml("#f6d02d"); // kuning
-            Color botColor = ColorTranslator.FromHtml("#2e7040");  // hijau
+            Color userColor = Color.CornflowerBlue;
+            Color botColor = Color.FromArgb(235, 235, 240);
+
+            Color borderColor = isUser ? Color.RoyalBlue : Color.DarkGray;
 
             Panel bubble = new Panel
             {
                 AutoSize = true,
                 Padding = new Padding(12),
                 BackColor = isUser ? userColor : botColor,
-                MaximumSize = new Size(350, 0),
-                Margin = new Padding(5)
+                MaximumSize = new Size(400, 0),
             };
 
             bubble.Paint += (s, e) =>
             {
-                int radius = 18;
+                e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+                int radius = 20;
                 GraphicsPath path = new GraphicsPath();
+
                 Rectangle r = bubble.ClientRectangle;
+                r.Inflate(-1, -1);
 
                 path.AddArc(r.X, r.Y, radius, radius, 180, 90);
                 path.AddArc(r.Right - radius, r.Y, radius, radius, 270, 90);
                 path.AddArc(r.Right - radius, r.Bottom - radius, radius, radius, 0, 90);
                 path.AddArc(r.X, r.Bottom - radius, radius, radius, 90, 90);
                 path.CloseFigure();
-
                 bubble.Region = new Region(path);
+
+                using (Pen pen = new Pen(borderColor, 2f))
+                {
+                    e.Graphics.DrawPath(pen, path);
+                }
             };
+
 
             Label lbl = new Label
             {
                 Text = text,
                 AutoSize = true,
-                MaximumSize = new Size(320, 0),
-                ForeColor = isUser ? Color.Black : Color.White,
-                BackColor = Color.Transparent
+                MaximumSize = new Size(370, 0),
+                ForeColor = isUser ? Color.White : Color.Black,
+                BackColor = Color.Transparent,
+                Font = new Font("Segoe UI", 10F, FontStyle.Regular)
             };
 
             bubble.Controls.Add(lbl);

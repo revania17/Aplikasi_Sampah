@@ -75,5 +75,10 @@ namespace cobaconnectdbonline
             new Form1().Show();
             this.Hide();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

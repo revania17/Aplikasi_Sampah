@@ -39,149 +39,172 @@
             this.btnTambah = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.btnBack = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(46, 236);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label4.Location = new System.Drawing.Point(64, 249);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 20);
+            this.label4.Size = new System.Drawing.Size(59, 23);
             this.label4.TabIndex = 17;
             this.label4.Text = "Role:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(46, 198);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label3.Location = new System.Drawing.Point(64, 200);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 20);
+            this.label3.Size = new System.Drawing.Size(112, 23);
             this.label3.TabIndex = 16;
-            this.label3.Text = "Password";
+            this.label3.Text = "Password :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(46, 160);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label2.Location = new System.Drawing.Point(64, 148);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 20);
+            this.label2.Size = new System.Drawing.Size(68, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Email:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(46, 115);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(64, 99);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.Size = new System.Drawing.Size(76, 23);
             this.label1.TabIndex = 14;
             this.label1.Text = "Nama:";
             // 
             // cmbRole
             // 
+            this.cmbRole.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbRole.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.cmbRole.FormattingEnabled = true;
             this.cmbRole.Items.AddRange(new object[] {
             "Admin",
             "Petugas"});
-            this.cmbRole.Location = new System.Drawing.Point(143, 236);
-            this.cmbRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbRole.Location = new System.Drawing.Point(188, 249);
             this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(112, 28);
+            this.cmbRole.Size = new System.Drawing.Size(212, 31);
             this.cmbRole.TabIndex = 13;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(143, 195);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtPassword.Location = new System.Drawing.Point(188, 200);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(112, 26);
+            this.txtPassword.Size = new System.Drawing.Size(212, 32);
             this.txtPassword.TabIndex = 12;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(143, 156);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtEmail.Location = new System.Drawing.Point(188, 148);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(112, 26);
+            this.txtEmail.Size = new System.Drawing.Size(212, 32);
             this.txtEmail.TabIndex = 11;
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(143, 122);
-            this.txtNama.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtNama.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNama.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtNama.Location = new System.Drawing.Point(188, 96);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(112, 26);
+            this.txtNama.Size = new System.Drawing.Size(212, 32);
             this.txtNama.TabIndex = 10;
             // 
             // btnTambah
             // 
-            this.btnTambah.Location = new System.Drawing.Point(66, 322);
-            this.btnTambah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTambah.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTambah.FlatAppearance.BorderSize = 0;
+            this.btnTambah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTambah.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTambah.ForeColor = System.Drawing.Color.White;
+            this.btnTambah.Location = new System.Drawing.Point(188, 335);
             this.btnTambah.Name = "btnTambah";
-            this.btnTambah.Size = new System.Drawing.Size(84, 29);
+            this.btnTambah.Size = new System.Drawing.Size(107, 38);
             this.btnTambah.TabIndex = 18;
             this.btnTambah.Text = "Tambah";
-            this.btnTambah.UseVisualStyleBackColor = true;
+            this.btnTambah.UseVisualStyleBackColor = false;
             this.btnTambah.Click += new System.EventHandler(this.btnTambah_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(156, 322);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(68, 335);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(84, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(107, 38);
             this.btnUpdate.TabIndex = 19;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dgvUsers
             // 
             this.dgvUsers.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(296, 52);
-            this.dgvUsers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvUsers.Location = new System.Drawing.Point(524, 92);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowHeadersWidth = 51;
             this.dgvUsers.RowTemplate.Height = 24;
-            this.dgvUsers.Size = new System.Drawing.Size(557, 444);
+            this.dgvUsers.Size = new System.Drawing.Size(737, 515);
             this.dgvUsers.TabIndex = 20;
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(15, 15);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(84, 29);
-            this.btnBack.TabIndex = 21;
-            this.btnBack.Text = "Kembali";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(769, 15);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(524, 42);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(84, 29);
+            this.btnRefresh.Size = new System.Drawing.Size(113, 40);
             this.btnRefresh.TabIndex = 22;
             this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.Location = new System.Drawing.Point(99, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(271, 27);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Manajemen Data Users";
             // 
             // FormDataUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(875, 532);
+            this.ClientSize = new System.Drawing.Size(1300, 712);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnTambah);
@@ -193,9 +216,8 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNama);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormDataUser";
-            this.Text = "FormDataUser";
+            this.Text = "Manajemen Data User";
             this.Load += new System.EventHandler(this.FormDataUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.ResumeLayout(false);
@@ -216,7 +238,7 @@
         private System.Windows.Forms.Button btnTambah;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.DataGridView dgvUsers;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Label label6;
     }
 }

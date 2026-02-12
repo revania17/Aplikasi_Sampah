@@ -40,7 +40,6 @@ namespace cobaconnectdbonline
         private void FormDataSampah_Load(object sender, EventArgs e)
         {
             LoadWilayah();
-            LoadJenis();
             LoadData();
         }
 
@@ -53,17 +52,6 @@ namespace cobaconnectdbonline
             cmbWilayah.DisplayMember = "nama_wilayah";
             cmbWilayah.ValueMember = "id_wilayah";
             cmbWilayah.SelectedIndex = -1;
-        }
-
-        private void LoadJenis()
-        {
-            var db = new Database();
-            var jenis = db.JenisSampah.Find(_ => true).ToList();
-
-            cmbJenis.DataSource = jenis;
-            cmbJenis.DisplayMember = "nama_jenis";
-            cmbJenis.ValueMember = "id_jenis";
-            cmbJenis.SelectedIndex = -1;
         }
 
         private void LoadData()
@@ -79,8 +67,7 @@ namespace cobaconnectdbonline
                     id_sampah = x.id_sampah,
                     Wilayah = wilayah
                         .FirstOrDefault(w => w.id_wilayah == x.id_wilayah)?.nama_wilayah,
-                    Jenis = jenis
-                        .FirstOrDefault(j => j.id_jenis == x.id_jenis)?.nama_jenis,
+                    Jenis = x.id_jenis,
                     x.Jumlah,
                     x.Tanggal,
                     x.Petugas
@@ -205,7 +192,7 @@ namespace cobaconnectdbonline
 
         private void btnTambah_Click(object sender, EventArgs e)
         {
-            if (cmbWilayah.SelectedIndex == -1 || cmbJenis.SelectedIndex == -1)
+            if (cmbWilayah.SelectedIndex == -1 || string.IsNullOrEmpty(txtJenis.Text))
             {
                 MessageBox.Show("Wilayah dan jenis sampah wajib dipilih");
                 return;
@@ -220,7 +207,7 @@ namespace cobaconnectdbonline
             var data = new DataSampah
             {
                 id_wilayah = cmbWilayah.SelectedValue.ToString(),
-                id_jenis = cmbJenis.SelectedValue.ToString(),
+                id_jenis = txtJenis.Text,
                 Jumlah = jumlah,
                 Tanggal = dtTanggal.Value,
                 Petugas = txtPetugas.Text,
@@ -245,8 +232,7 @@ namespace cobaconnectdbonline
             cmbWilayah.Text = dgvDataSampah.Rows[e.RowIndex]
                 .Cells["Wilayah"].Value.ToString();
 
-            cmbJenis.Text = dgvDataSampah.Rows[e.RowIndex]
-                .Cells["Jenis"].Value.ToString();
+            txtJenis.Text = dgvDataSampah.Rows[e.RowIndex].Cells["Jenis"].Value.ToString();
 
             txtJumlah.Text = dgvDataSampah.Rows[e.RowIndex]
                 .Cells["Jumlah"].Value.ToString();
@@ -273,7 +259,7 @@ namespace cobaconnectdbonline
 
             var update = Builders<DataSampah>.Update
                 .Set(x => x.id_wilayah, cmbWilayah.SelectedValue.ToString())
-                .Set(x => x.id_jenis, cmbJenis.SelectedValue.ToString())
+                .Set(x => x.id_jenis, txtJenis.Text)
                 .Set(x => x.Jumlah, Convert.ToDouble(txtJumlah.Text))
                 .Set(x => x.Tanggal, dtTanggal.Value)
                 .Set(x => x.Petugas, txtPetugas.Text);
@@ -313,7 +299,7 @@ namespace cobaconnectdbonline
         private void ClearForm()
         {
             cmbWilayah.SelectedIndex = -1;
-            cmbJenis.SelectedIndex = -1;
+            txtJenis.Clear();
             txtJumlah.Clear();
             txtPetugas.Clear();
             selectedId = null;
@@ -427,6 +413,11 @@ namespace cobaconnectdbonline
 
             // Perbaikan: Ganti dataGridView1 menjadi dgvDataSampah
             dgvDataSampah.DataSource = dataTable;
+        }
+
+        private void btnHapus_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

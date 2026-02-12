@@ -33,143 +33,189 @@
             this.btnRefresh = new System.Windows.Forms.Button();
             this.dgvPenjemputan = new System.Windows.Forms.DataGridView();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPenjemputan)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNama
             // 
             this.lblNama.AutoSize = true;
-            this.lblNama.Location = new System.Drawing.Point(12, 15);
+            this.lblNama.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNama.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblNama.Location = new System.Drawing.Point(56, 90);
             this.lblNama.Name = "lblNama";
-            this.lblNama.Size = new System.Drawing.Size(51, 20);
+            this.lblNama.Size = new System.Drawing.Size(82, 23);
             this.lblNama.TabIndex = 1;
-            this.lblNama.Text = "Nama";
+            this.lblNama.Text = "Nama :";
             // 
             // lblJenis
             // 
             this.lblJenis.AutoSize = true;
-            this.lblJenis.Location = new System.Drawing.Point(12, 50);
+            this.lblJenis.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJenis.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblJenis.Location = new System.Drawing.Point(55, 138);
             this.lblJenis.Name = "lblJenis";
-            this.lblJenis.Size = new System.Drawing.Size(110, 20);
+            this.lblJenis.Size = new System.Drawing.Size(157, 23);
             this.lblJenis.TabIndex = 3;
-            this.lblJenis.Text = "Jenis Sampah";
+            this.lblJenis.Text = "Jenis Sampah :";
             // 
             // lblTanggal
             // 
-            this.lblTanggal.Location = new System.Drawing.Point(0, 0);
+            this.lblTanggal.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTanggal.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblTanggal.Location = new System.Drawing.Point(56, 182);
             this.lblTanggal.Name = "lblTanggal";
             this.lblTanggal.Size = new System.Drawing.Size(100, 23);
             this.lblTanggal.TabIndex = 5;
+            this.lblTanggal.Text = "Tanggal :";
             // 
             // lblStatus
             // 
-            this.lblStatus.Location = new System.Drawing.Point(0, 0);
+            this.lblStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblStatus.Location = new System.Drawing.Point(56, 230);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(100, 23);
             this.lblStatus.TabIndex = 7;
+            this.lblStatus.Text = "Status :";
             // 
             // lblLatitude
             // 
-            this.lblLatitude.Location = new System.Drawing.Point(0, 0);
+            this.lblLatitude.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLatitude.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblLatitude.Location = new System.Drawing.Point(50, 277);
             this.lblLatitude.Name = "lblLatitude";
-            this.lblLatitude.Size = new System.Drawing.Size(100, 23);
+            this.lblLatitude.Size = new System.Drawing.Size(117, 23);
             this.lblLatitude.TabIndex = 9;
+            this.lblLatitude.Text = " Latitude :";
             // 
             // lblLongitude
             // 
-            this.lblLongitude.Location = new System.Drawing.Point(0, 0);
+            this.lblLongitude.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLongitude.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblLongitude.Location = new System.Drawing.Point(56, 325);
             this.lblLongitude.Name = "lblLongitude";
-            this.lblLongitude.Size = new System.Drawing.Size(100, 23);
+            this.lblLongitude.Size = new System.Drawing.Size(132, 23);
             this.lblLongitude.TabIndex = 11;
+            this.lblLongitude.Text = "Longtitude :";
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(150, 12);
+            this.txtNama.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNama.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtNama.Location = new System.Drawing.Point(219, 87);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(200, 26);
+            this.txtNama.Size = new System.Drawing.Size(213, 32);
             this.txtNama.TabIndex = 2;
             // 
             // cmbJenis
             // 
             this.cmbJenis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbJenis.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbJenis.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.cmbJenis.Items.AddRange(new object[] {
             "Organik",
             "Anorganik",
             "B3"});
-            this.cmbJenis.Location = new System.Drawing.Point(150, 47);
+            this.cmbJenis.Location = new System.Drawing.Point(219, 135);
             this.cmbJenis.Name = "cmbJenis";
-            this.cmbJenis.Size = new System.Drawing.Size(200, 28);
+            this.cmbJenis.Size = new System.Drawing.Size(213, 31);
             this.cmbJenis.TabIndex = 4;
             // 
             // dtpTanggal
             // 
-            this.dtpTanggal.Location = new System.Drawing.Point(150, 79);
+            this.dtpTanggal.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpTanggal.Location = new System.Drawing.Point(219, 182);
             this.dtpTanggal.Name = "dtpTanggal";
-            this.dtpTanggal.Size = new System.Drawing.Size(200, 26);
+            this.dtpTanggal.Size = new System.Drawing.Size(213, 28);
             this.dtpTanggal.TabIndex = 6;
             // 
             // cmbStatus
             // 
             this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStatus.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.cmbStatus.Items.AddRange(new object[] {
             "Menunggu",
             "Diproses",
             "Selesai"});
-            this.cmbStatus.Location = new System.Drawing.Point(150, 120);
+            this.cmbStatus.Location = new System.Drawing.Point(219, 227);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(200, 28);
+            this.cmbStatus.Size = new System.Drawing.Size(213, 31);
             this.cmbStatus.TabIndex = 8;
             // 
             // txtLatitude
             // 
-            this.txtLatitude.Location = new System.Drawing.Point(150, 155);
+            this.txtLatitude.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLatitude.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtLatitude.Location = new System.Drawing.Point(219, 274);
             this.txtLatitude.Name = "txtLatitude";
-            this.txtLatitude.Size = new System.Drawing.Size(200, 26);
+            this.txtLatitude.Size = new System.Drawing.Size(213, 32);
             this.txtLatitude.TabIndex = 10;
             // 
             // txtLongitude
             // 
-            this.txtLongitude.Location = new System.Drawing.Point(150, 193);
+            this.txtLongitude.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLongitude.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtLongitude.Location = new System.Drawing.Point(219, 326);
             this.txtLongitude.Name = "txtLongitude";
-            this.txtLongitude.Size = new System.Drawing.Size(200, 26);
+            this.txtLongitude.Size = new System.Drawing.Size(213, 32);
             this.txtLongitude.TabIndex = 12;
             // 
             // btnSimpan
             // 
-            this.btnSimpan.Location = new System.Drawing.Point(150, 225);
+            this.btnSimpan.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSimpan.FlatAppearance.BorderSize = 0;
+            this.btnSimpan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpan.ForeColor = System.Drawing.Color.White;
+            this.btnSimpan.Location = new System.Drawing.Point(60, 399);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(95, 30);
+            this.btnSimpan.Size = new System.Drawing.Size(112, 38);
             this.btnSimpan.TabIndex = 13;
             this.btnSimpan.Text = "Simpan";
+            this.btnSimpan.UseVisualStyleBackColor = false;
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(255, 225);
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnRefresh.FlatAppearance.BorderSize = 0;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(178, 399);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(95, 30);
+            this.btnRefresh.Size = new System.Drawing.Size(112, 38);
             this.btnRefresh.TabIndex = 14;
             this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
             // 
             // dgvPenjemputan
             // 
+            this.dgvPenjemputan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPenjemputan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPenjemputan.BackgroundColor = System.Drawing.Color.White;
             this.dgvPenjemputan.ColumnHeadersHeight = 34;
-            this.dgvPenjemputan.Location = new System.Drawing.Point(12, 270);
+            this.dgvPenjemputan.Location = new System.Drawing.Point(467, 24);
             this.dgvPenjemputan.Name = "dgvPenjemputan";
             this.dgvPenjemputan.ReadOnly = true;
             this.dgvPenjemputan.RowHeadersWidth = 62;
-            this.dgvPenjemputan.Size = new System.Drawing.Size(338, 219);
+            this.dgvPenjemputan.Size = new System.Drawing.Size(798, 370);
             this.dgvPenjemputan.TabIndex = 15;
             // 
             // gMapControl1
             // 
+            this.gMapControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gMapControl1.Bearing = 0F;
             this.gMapControl1.CanDragMap = true;
             this.gMapControl1.EmptyTileColor = System.Drawing.Color.Navy;
             this.gMapControl1.GrayScaleMode = false;
             this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
             this.gMapControl1.LevelsKeepInMemory = 5;
-            this.gMapControl1.Location = new System.Drawing.Point(365, 12);
+            this.gMapControl1.Location = new System.Drawing.Point(467, 421);
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 2;
             this.gMapControl1.MinZoom = 2;
@@ -183,13 +229,26 @@
             this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(473, 477);
+            this.gMapControl1.Size = new System.Drawing.Size(798, 258);
             this.gMapControl1.TabIndex = 16;
             this.gMapControl1.Zoom = 2D;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label6.Location = new System.Drawing.Point(62, 19);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(364, 27);
+            this.label6.TabIndex = 20;
+            this.label6.Text = "Manajemen Data Penjemputan";
+            // 
             // DataPenjemputan
             // 
-            this.ClientSize = new System.Drawing.Size(875, 532);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(1300, 712);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.lblNama);
             this.Controls.Add(this.txtNama);
             this.Controls.Add(this.lblJenis);
@@ -207,7 +266,7 @@
             this.Controls.Add(this.dgvPenjemputan);
             this.Controls.Add(this.gMapControl1);
             this.Name = "DataPenjemputan";
-            this.Text = "Data Penjemputan Sampah - Edit Mode";
+            this.Text = "Manajemen Penjemputan Sampah";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPenjemputan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -232,5 +291,6 @@
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridView dgvPenjemputan;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
+        private System.Windows.Forms.Label label6;
     }
 }

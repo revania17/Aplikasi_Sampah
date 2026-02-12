@@ -33,118 +33,175 @@ namespace cobaconnectdbonline
             this.btnKabko = new System.Windows.Forms.Button();
             this.btnUser = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnJenisSampah = new System.Windows.Forms.Button();
             this.btnDataSampah = new System.Windows.Forms.Button();
             this.btnChatBot = new System.Windows.Forms.Button();
             this.panelMain = new System.Windows.Forms.Panel();
             this.btnDataPenjemputan = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelMain.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnKabko
             // 
-            this.btnKabko.Location = new System.Drawing.Point(263, 43);
-            this.btnKabko.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnKabko.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnKabko.FlatAppearance.BorderSize = 0;
+            this.btnKabko.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnKabko.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnKabko.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKabko.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnKabko.Location = new System.Drawing.Point(0, 120);
             this.btnKabko.Name = "btnKabko";
-            this.btnKabko.Size = new System.Drawing.Size(209, 52);
+            this.btnKabko.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnKabko.Size = new System.Drawing.Size(313, 60);
             this.btnKabko.TabIndex = 0;
             this.btnKabko.Text = "Data Kabupaten Kota";
+            this.btnKabko.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnKabko.UseVisualStyleBackColor = true;
             this.btnKabko.Click += new System.EventHandler(this.btnKabko_Click);
             // 
             // btnUser
             // 
-            this.btnUser.Location = new System.Drawing.Point(48, 43);
-            this.btnUser.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUser.FlatAppearance.BorderSize = 0;
+            this.btnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUser.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUser.Location = new System.Drawing.Point(0, 60);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(209, 52);
-            this.btnUser.TabIndex = 1;
+            this.btnUser.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnUser.Size = new System.Drawing.Size(313, 60);
+            this.btnUser.TabIndex = 0;
             this.btnUser.Text = "Data Users";
+            this.btnUser.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnUser.UseVisualStyleBackColor = true;
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(31, 657);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogout.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLogout.FlatAppearance.BorderSize = 0;
+            this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLogout.Location = new System.Drawing.Point(0, 667);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(99, 34);
+            this.btnLogout.Size = new System.Drawing.Size(313, 45);
             this.btnLogout.TabIndex = 2;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
-            // btnJenisSampah
-            // 
-            this.btnJenisSampah.Location = new System.Drawing.Point(478, 43);
-            this.btnJenisSampah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnJenisSampah.Name = "btnJenisSampah";
-            this.btnJenisSampah.Size = new System.Drawing.Size(209, 52);
-            this.btnJenisSampah.TabIndex = 3;
-            this.btnJenisSampah.Text = "Data Jenis Sampah";
-            this.btnJenisSampah.UseVisualStyleBackColor = true;
-            this.btnJenisSampah.Click += new System.EventHandler(this.btnJenisSampah_Click);
             // 
             // btnDataSampah
             // 
-            this.btnDataSampah.Location = new System.Drawing.Point(693, 43);
-            this.btnDataSampah.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDataSampah.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDataSampah.FlatAppearance.BorderSize = 0;
+            this.btnDataSampah.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDataSampah.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDataSampah.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDataSampah.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDataSampah.Location = new System.Drawing.Point(0, 180);
             this.btnDataSampah.Name = "btnDataSampah";
-            this.btnDataSampah.Size = new System.Drawing.Size(209, 52);
+            this.btnDataSampah.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDataSampah.Size = new System.Drawing.Size(313, 60);
             this.btnDataSampah.TabIndex = 4;
             this.btnDataSampah.Text = "Data Sampah";
+            this.btnDataSampah.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnDataSampah.UseVisualStyleBackColor = true;
             this.btnDataSampah.Click += new System.EventHandler(this.btnDataSampah_Click);
             // 
             // btnChatBot
             // 
-            this.btnChatBot.Location = new System.Drawing.Point(908, 648);
-            this.btnChatBot.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChatBot.FlatAppearance.BorderSize = 0;
+            this.btnChatBot.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnChatBot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChatBot.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChatBot.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnChatBot.Location = new System.Drawing.Point(0, 241);
             this.btnChatBot.Name = "btnChatBot";
-            this.btnChatBot.Size = new System.Drawing.Size(209, 52);
+            this.btnChatBot.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnChatBot.Size = new System.Drawing.Size(313, 60);
             this.btnChatBot.TabIndex = 5;
             this.btnChatBot.Text = "Chat Bot";
+            this.btnChatBot.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnChatBot.UseVisualStyleBackColor = true;
             this.btnChatBot.Click += new System.EventHandler(this.btnChatBot_Click);
             // 
             // panelMain
             // 
-            this.panelMain.BackColor = System.Drawing.Color.White;
-            this.panelMain.Location = new System.Drawing.Point(41, 109);
+            this.panelMain.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panelMain.Controls.Add(this.label1);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(313, 0);
+            this.panelMain.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1076, 515);
+            this.panelMain.Size = new System.Drawing.Size(987, 712);
             this.panelMain.TabIndex = 6;
             this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
             // 
             // btnDataPenjemputan
             // 
-            this.btnDataPenjemputan.Location = new System.Drawing.Point(908, 43);
-            this.btnDataPenjemputan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnDataPenjemputan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDataPenjemputan.FlatAppearance.BorderSize = 0;
+            this.btnDataPenjemputan.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDataPenjemputan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDataPenjemputan.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDataPenjemputan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnDataPenjemputan.Location = new System.Drawing.Point(0, 0);
             this.btnDataPenjemputan.Name = "btnDataPenjemputan";
-            this.btnDataPenjemputan.Size = new System.Drawing.Size(209, 52);
+            this.btnDataPenjemputan.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDataPenjemputan.Size = new System.Drawing.Size(313, 60);
             this.btnDataPenjemputan.TabIndex = 7;
             this.btnDataPenjemputan.Text = "Data Penjemputan";
+            this.btnDataPenjemputan.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btnDataPenjemputan.UseVisualStyleBackColor = true;
             this.btnDataPenjemputan.Click += new System.EventHandler(this.btnDataPenjemputan_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.btnDataSampah);
+            this.panel1.Controls.Add(this.btnKabko);
+            this.panel1.Controls.Add(this.btnUser);
+            this.panel1.Controls.Add(this.btnDataPenjemputan);
+            this.panel1.Controls.Add(this.btnLogout);
+            this.panel1.Controls.Add(this.btnChatBot);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(313, 712);
+            this.panel1.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label1.Location = new System.Drawing.Point(19, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(720, 56);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Halo Selamat Datang Kembali!";
+            // 
             // FormAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.BackgroundImage = global::cobaconnectdbonline.Properties.Resources.sampah4;
-            this.ClientSize = new System.Drawing.Size(1140, 731);
-            this.Controls.Add(this.btnKabko);
-            this.Controls.Add(this.btnDataPenjemputan);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(1300, 712);
             this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.btnChatBot);
-            this.Controls.Add(this.btnDataSampah);
-            this.Controls.Add(this.btnJenisSampah);
-            this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnUser);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Controls.Add(this.panel1);
             this.Name = "FormAdmin";
-            this.Text = "FormAdmin";
+            this.Text = "Dashboard Admin";
             this.Load += new System.EventHandler(this.FormAdmin_Load);
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -154,11 +211,11 @@ namespace cobaconnectdbonline
         private System.Windows.Forms.Button btnKabko;
         private System.Windows.Forms.Button btnUser;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnJenisSampah;
         private System.Windows.Forms.Button btnDataSampah;
         private System.Windows.Forms.Button btnChatBot;
         private System.Windows.Forms.Button btnDataPenjemputan;
         private System.Windows.Forms.Panel panelMain;
-        
+        private Panel panel1;
+        private Label label1;
     }
 }

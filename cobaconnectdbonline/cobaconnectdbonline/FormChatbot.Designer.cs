@@ -34,49 +34,65 @@
             this.cmbModel = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.btnBack = new System.Windows.Forms.Button();
             this.chatPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(30, 447);
+            this.txtMessage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMessage.Location = new System.Drawing.Point(27, 613);
+            this.txtMessage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(478, 26);
+            this.txtMessage.Size = new System.Drawing.Size(611, 32);
             this.txtMessage.TabIndex = 1;
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(657, 437);
+            this.btnSend.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSend.FlatAppearance.BorderSize = 0;
+            this.btnSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSend.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSend.ForeColor = System.Drawing.Color.White;
+            this.btnSend.Location = new System.Drawing.Point(651, 613);
+            this.btnSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(87, 36);
+            this.btnSend.Size = new System.Drawing.Size(123, 34);
             this.btnSend.TabIndex = 2;
             this.btnSend.Text = "Kirim";
-            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(750, 437);
+            this.btnClear.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(780, 613);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(96, 36);
+            this.btnClear.Size = new System.Drawing.Size(124, 34);
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "Bersihkan";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             // 
             // cmbModel
             // 
+            this.cmbModel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbModel.FormattingEnabled = true;
-            this.cmbModel.Location = new System.Drawing.Point(643, 12);
+            this.cmbModel.Location = new System.Drawing.Point(705, 19);
+            this.cmbModel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbModel.Name = "cmbModel";
-            this.cmbModel.Size = new System.Drawing.Size(121, 28);
+            this.cmbModel.Size = new System.Drawing.Size(199, 29);
             this.cmbModel.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(577, 15);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(625, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.Size = new System.Drawing.Size(71, 19);
             this.label1.TabIndex = 5;
             this.label1.Text = "Model :";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -84,49 +100,41 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
-            this.lblStatus.Location = new System.Drawing.Point(26, 503);
+            this.lblStatus.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStatus.Location = new System.Drawing.Point(24, 658);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(41, 20);
+            this.lblStatus.Size = new System.Drawing.Size(47, 19);
             this.lblStatus.TabIndex = 6;
-            this.lblStatus.Text = "Siap";
-            // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(30, 11);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(84, 29);
-            this.btnBack.TabIndex = 16;
-            this.btnBack.Text = "Kembali";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.lblStatus.Text = "Halo";
             // 
             // chatPanel
             // 
             this.chatPanel.AutoScroll = true;
             this.chatPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.chatPanel.Location = new System.Drawing.Point(30, 54);
+            this.chatPanel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chatPanel.Location = new System.Drawing.Point(27, 74);
+            this.chatPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chatPanel.Name = "chatPanel";
-            this.chatPanel.Size = new System.Drawing.Size(816, 377);
+            this.chatPanel.Size = new System.Drawing.Size(877, 515);
             this.chatPanel.TabIndex = 17;
             this.chatPanel.WrapContents = false;
             // 
             // FormChatbot
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(875, 532);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(1300, 712);
             this.Controls.Add(this.chatPanel);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbModel);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtMessage);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormChatbot";
-            this.Text = "FormChatbot";
+            this.Text = "Chatbot";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,7 +147,6 @@
         private System.Windows.Forms.ComboBox cmbModel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblStatus;
-        private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.FlowLayoutPanel chatPanel;
     }
 }

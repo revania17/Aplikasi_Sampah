@@ -19,43 +19,53 @@ namespace cobaconnectdbonline
             // All visual/design properties removed so you can edit them from the Designer/Properties.
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             Database db = new Database();
+            await db.SeedAdmin();
+        }
 
-            var user = db.Users.Find(u => u.email == txtEmail.Text).FirstOrDefault();
+        private async void btnLogin_Click(object sender, EventArgs e)
+        {
+            var db = new Database();
+            string email = txtEmail.Text;
+            string password = txtPassword.Text;
 
-            if (user == null)
+            var user = db.Users.Find(u => u.email == email).FirstOrDefault();
+
+            if (user != null)
             {
-                MessageBox.Show("Email tidak ditemukan");
-                return;
-            }
+                if (BCrypt.Net.BCrypt.Verify(password, user.password))
+                {
+                    MessageBox.Show($"Selamat datang, {user.nama}!");
 
-            bool isValid = BCrypt.Net.BCrypt.Verify(txtPassword.Text, user.password);
+                    if (user.role == "Admin")
+                    {
+                        FormAdmin fAdmin = new FormAdmin();
+                        fAdmin.Show();
+                    }
+                    else if (user.role == "Petugas")
+                    {
+                        FormPetugas fPetugas = new FormPetugas();
+                        fPetugas.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Role tidak dikenali!");
+                        return;
+                    }
 
-            if (!isValid)
-            {
-                MessageBox.Show("Password salah");
-                return;
-            }
-
-            MessageBox.Show("Login berhasil sebagai " + user.role);
-
-            // Contoh role
-            if (user.role == "Admin")
-            {
-                new FormAdmin().Show();
+                    this.Hide(); 
+                }
+                else
+                {
+                    MessageBox.Show("Password salah!");
+                }
             }
             else
             {
-                new FormPetugas().Show();
+                MessageBox.Show("Email tidak terdaftar!");
             }
-
-            this.Hide();
         }
 
         private void btnRegis_Click(object sender, EventArgs e)

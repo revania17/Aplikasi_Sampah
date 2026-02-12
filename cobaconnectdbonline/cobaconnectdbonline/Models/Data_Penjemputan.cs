@@ -28,5 +28,6 @@ namespace cobaconnectdbonline.Models
 
         [BsonElement("created_at")]
         public DateTime CreatedAt { get; set; }
+        public string Jenis { get; internal set; }
     }
 }

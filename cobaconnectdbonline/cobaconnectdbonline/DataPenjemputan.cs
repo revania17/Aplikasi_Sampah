@@ -84,6 +84,7 @@ namespace cobaconnectdbonline
             dgvPenjemputan.Columns["Id"].Visible = false;
 
             dgvPenjemputan.Columns.Add("Nama", "Nama");
+            dgvPenjemputan.Columns.Add("Jenis", "Jenis");
             dgvPenjemputan.Columns.Add("Status", "Status");
             dgvPenjemputan.Columns.Add("Latitude", "Latitude");
             dgvPenjemputan.Columns.Add("Longitude", "Longitude");
@@ -107,6 +108,7 @@ namespace cobaconnectdbonline
                     dgvPenjemputan.Rows.Add(
                         d.Id,
                         d.Nama,
+                        d.Jenis,
                         d.Status,
                         d.Latitude,
                         d.Longitude,
@@ -132,6 +134,7 @@ namespace cobaconnectdbonline
             selectedId = row.Cells["Id"].Value?.ToString();
 
             txtNama.Text = row.Cells["Nama"].Value?.ToString();
+            txtJenis.Text = row.Cells["Jenis"].Value?.ToString();
             cmbStatus.Text = row.Cells["Status"].Value?.ToString();
             txtLatitude.Text = row.Cells["Latitude"].Value?.ToString();
             txtLongitude.Text = row.Cells["Longitude"].Value?.ToString();
@@ -206,6 +209,7 @@ namespace cobaconnectdbonline
             var data = new Data_Penjemputan
             {
                 Nama = txtNama.Text.Trim(),
+                Jenis = txtJenis.Text.Trim(),
                 Latitude = lat,
                 Longitude = lng,
                 Status = cmbStatus.Text,
@@ -227,6 +231,7 @@ namespace cobaconnectdbonline
 
             var update = Builders<Data_Penjemputan>.Update
                 .Set(x => x.Nama, txtNama.Text.Trim())
+                .Set(x => x.Jenis, txtJenis.Text.Trim())
                 .Set(x => x.Status, cmbStatus.Text)
                 .Set(x => x.Latitude, lat)
                 .Set(x => x.Longitude, lng)
@@ -255,7 +260,11 @@ namespace cobaconnectdbonline
                 MessageBox.Show("Nama wajib diisi");
                 return false;
             }
-
+            if (string.IsNullOrWhiteSpace(txtJenis.Text))
+            {
+                MessageBox.Show("Jenis wajib diisi");
+                return false;
+            }
             if (string.IsNullOrWhiteSpace(cmbStatus.Text))
             {
                 MessageBox.Show("Status wajib diisi");
@@ -282,6 +291,7 @@ namespace cobaconnectdbonline
         private void ClearInput()
         {
             txtNama.Clear();
+            txtJenis.Clear();
             txtLatitude.Clear();
             txtLongitude.Clear();
 

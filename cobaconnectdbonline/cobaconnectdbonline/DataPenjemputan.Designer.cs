@@ -24,7 +24,6 @@
             this.lblLatitude = new System.Windows.Forms.Label();
             this.lblLongitude = new System.Windows.Forms.Label();
             this.txtNama = new System.Windows.Forms.TextBox();
-            this.cmbJenis = new System.Windows.Forms.ComboBox();
             this.dtpTanggal = new System.Windows.Forms.DateTimePicker();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.txtLatitude = new System.Windows.Forms.TextBox();
@@ -34,6 +33,7 @@
             this.dgvPenjemputan = new System.Windows.Forms.DataGridView();
             this.gMapControl1 = new GMap.NET.WindowsForms.GMapControl();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtJenis = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPenjemputan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,20 +107,6 @@
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(213, 32);
             this.txtNama.TabIndex = 2;
-            // 
-            // cmbJenis
-            // 
-            this.cmbJenis.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbJenis.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbJenis.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.cmbJenis.Items.AddRange(new object[] {
-            "Organik",
-            "Anorganik",
-            "B3"});
-            this.cmbJenis.Location = new System.Drawing.Point(219, 135);
-            this.cmbJenis.Name = "cmbJenis";
-            this.cmbJenis.Size = new System.Drawing.Size(213, 31);
-            this.cmbJenis.TabIndex = 4;
             // 
             // dtpTanggal
             // 
@@ -244,15 +230,24 @@
             this.label6.TabIndex = 20;
             this.label6.Text = "Manajemen Data Penjemputan";
             // 
+            // txtJenis
+            // 
+            this.txtJenis.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtJenis.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.txtJenis.Location = new System.Drawing.Point(219, 138);
+            this.txtJenis.Name = "txtJenis";
+            this.txtJenis.Size = new System.Drawing.Size(213, 32);
+            this.txtJenis.TabIndex = 21;
+            // 
             // DataPenjemputan
             // 
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1300, 712);
+            this.Controls.Add(this.txtJenis);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lblNama);
             this.Controls.Add(this.txtNama);
             this.Controls.Add(this.lblJenis);
-            this.Controls.Add(this.cmbJenis);
             this.Controls.Add(this.lblTanggal);
             this.Controls.Add(this.dtpTanggal);
             this.Controls.Add(this.lblStatus);
@@ -282,7 +277,6 @@
         private System.Windows.Forms.Label lblLatitude;
         private System.Windows.Forms.Label lblLongitude;
         private System.Windows.Forms.TextBox txtNama;
-        private System.Windows.Forms.ComboBox cmbJenis;
         private System.Windows.Forms.DateTimePicker dtpTanggal;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.TextBox txtLatitude;
@@ -292,5 +286,6 @@
         private System.Windows.Forms.DataGridView dgvPenjemputan;
         private GMap.NET.WindowsForms.GMapControl gMapControl1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtJenis;
     }
 }

@@ -44,7 +44,7 @@
             this.lblNama.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblNama.Location = new System.Drawing.Point(56, 90);
             this.lblNama.Name = "lblNama";
-            this.lblNama.Size = new System.Drawing.Size(82, 23);
+            this.lblNama.Size = new System.Drawing.Size(99, 28);
             this.lblNama.TabIndex = 1;
             this.lblNama.Text = "Nama :";
             // 
@@ -55,7 +55,7 @@
             this.lblJenis.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblJenis.Location = new System.Drawing.Point(55, 138);
             this.lblJenis.Name = "lblJenis";
-            this.lblJenis.Size = new System.Drawing.Size(157, 23);
+            this.lblJenis.Size = new System.Drawing.Size(188, 28);
             this.lblJenis.TabIndex = 3;
             this.lblJenis.Text = "Jenis Sampah :";
             // 
@@ -105,7 +105,7 @@
             this.txtNama.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtNama.Location = new System.Drawing.Point(219, 87);
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(213, 32);
+            this.txtNama.Size = new System.Drawing.Size(213, 37);
             this.txtNama.TabIndex = 2;
             // 
             // dtpTanggal
@@ -113,7 +113,7 @@
             this.dtpTanggal.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpTanggal.Location = new System.Drawing.Point(219, 182);
             this.dtpTanggal.Name = "dtpTanggal";
-            this.dtpTanggal.Size = new System.Drawing.Size(213, 28);
+            this.dtpTanggal.Size = new System.Drawing.Size(213, 33);
             this.dtpTanggal.TabIndex = 6;
             // 
             // cmbStatus
@@ -127,7 +127,7 @@
             "Selesai"});
             this.cmbStatus.Location = new System.Drawing.Point(219, 227);
             this.cmbStatus.Name = "cmbStatus";
-            this.cmbStatus.Size = new System.Drawing.Size(213, 31);
+            this.cmbStatus.Size = new System.Drawing.Size(213, 36);
             this.cmbStatus.TabIndex = 8;
             // 
             // txtLatitude
@@ -136,7 +136,7 @@
             this.txtLatitude.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtLatitude.Location = new System.Drawing.Point(219, 274);
             this.txtLatitude.Name = "txtLatitude";
-            this.txtLatitude.Size = new System.Drawing.Size(213, 32);
+            this.txtLatitude.Size = new System.Drawing.Size(213, 37);
             this.txtLatitude.TabIndex = 10;
             // 
             // txtLongitude
@@ -145,7 +145,7 @@
             this.txtLongitude.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtLongitude.Location = new System.Drawing.Point(219, 326);
             this.txtLongitude.Name = "txtLongitude";
-            this.txtLongitude.Size = new System.Drawing.Size(213, 32);
+            this.txtLongitude.Size = new System.Drawing.Size(213, 37);
             this.txtLongitude.TabIndex = 12;
             // 
             // btnSimpan
@@ -200,7 +200,7 @@
             this.gMapControl1.EmptyTileColor = System.Drawing.Color.Navy;
             this.gMapControl1.GrayScaleMode = false;
             this.gMapControl1.HelperLineOption = GMap.NET.WindowsForms.HelperLineOptions.DontShow;
-            this.gMapControl1.LevelsKeepInMemory = 5;
+            this.gMapControl1.LevelsKeepInMemmory = 5;
             this.gMapControl1.Location = new System.Drawing.Point(467, 421);
             this.gMapControl1.MarkersEnabled = true;
             this.gMapControl1.MaxZoom = 2;
@@ -215,7 +215,7 @@
             this.gMapControl1.ScaleMode = GMap.NET.WindowsForms.ScaleModes.Integer;
             this.gMapControl1.SelectedAreaFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(65)))), ((int)(((byte)(105)))), ((int)(((byte)(225)))));
             this.gMapControl1.ShowTileGridLines = false;
-            this.gMapControl1.Size = new System.Drawing.Size(798, 258);
+            this.gMapControl1.Size = new System.Drawing.Size(798, 267);
             this.gMapControl1.TabIndex = 16;
             this.gMapControl1.Zoom = 2D;
             // 
@@ -226,7 +226,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.label6.Location = new System.Drawing.Point(62, 19);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(364, 27);
+            this.label6.Size = new System.Drawing.Size(439, 34);
             this.label6.TabIndex = 20;
             this.label6.Text = "Manajemen Data Penjemputan";
             // 
@@ -236,7 +236,7 @@
             this.txtJenis.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.txtJenis.Location = new System.Drawing.Point(219, 138);
             this.txtJenis.Name = "txtJenis";
-            this.txtJenis.Size = new System.Drawing.Size(213, 32);
+            this.txtJenis.Size = new System.Drawing.Size(213, 37);
             this.txtJenis.TabIndex = 21;
             // 
             // DataPenjemputan

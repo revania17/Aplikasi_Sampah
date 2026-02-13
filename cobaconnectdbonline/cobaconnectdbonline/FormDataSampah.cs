@@ -23,6 +23,9 @@ namespace cobaconnectdbonline
     {
         string selectedId = null;
 
+        // Only allow these three types
+        private readonly string[] AllowedJenis = new[] { "Organik", "Anorganik", "B3" };
+
         public FormDataSampah()
         {
             InitializeComponent();
@@ -33,13 +36,13 @@ namespace cobaconnectdbonline
             btnHapus.Click += btnHapus_Click;
             btnRefresh.Click += btnRefresh_Click;
             dgvDataSampah.CellClick += dgvDataSampah_CellClick;
-            ExportButton.Click += ExportButton_Click;       
-
+            ExportButton.Click += ExportButton_Click;
         }
 
         private void FormDataSampah_Load(object sender, EventArgs e)
         {
             LoadWilayah();
+            PopulateJenisCombo();
             LoadData();
         }
 
@@ -54,20 +57,46 @@ namespace cobaconnectdbonline
             cmbWilayah.SelectedIndex = -1;
         }
 
+        // Fill the combobox with only the allowed list and disallow free typing
+        private void PopulateJenisCombo()
+        {
+            cmbJenis.Items.Clear();
+            cmbJenis.Items.AddRange(AllowedJenis);
+            cmbJenis.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbJenis.SelectedIndex = -1;
+
+            // Ensure DB has canonical jenis documents (optional: create missing)
+            var db = new Database();
+            var existing = db.JenisSampah.Find(_ => true).ToList();
+            foreach (var allowed in AllowedJenis)
+            {
+                var found = existing.FirstOrDefault(j => string.Equals(j.nama_jenis, allowed, StringComparison.OrdinalIgnoreCase));
+                if (found == null)
+                {
+                    // create only the allowed types if not present
+                    db.JenisSampah.InsertOne(new JenisSampah { nama_jenis = allowed, keterangan = string.Empty });
+                }
+            }
+        }
+
         private void LoadData()
         {
             var db = new Database();
 
             var wilayah = db.Kabupaten.Find(_ => true).ToList();
-            var jenis = db.JenisSampah.Find(_ => true).ToList();
+            var jenisList = db.JenisSampah.Find(_ => true).ToList();
+            var jenisMapById = jenisList.ToDictionary(j => j.id_jenis, j => j.nama_jenis, StringComparer.OrdinalIgnoreCase);
+            // Also create reverse map by name -> id for cases where previous data stored name instead of id
+            var jenisMapByName = jenisList.Where(j => !string.IsNullOrWhiteSpace(j.nama_jenis))
+                                          .ToDictionary(j => j.nama_jenis, j => j.id_jenis, StringComparer.OrdinalIgnoreCase);
 
             var data = db.DataSampah.Find(_ => true).ToList()
                 .Select(x => new
                 {
                     id_sampah = x.id_sampah,
-                    Wilayah = wilayah
-                        .FirstOrDefault(w => w.id_wilayah == x.id_wilayah)?.nama_wilayah,
-                    Jenis = x.id_jenis,
+                    Wilayah = wilayah.FirstOrDefault(w => w.id_wilayah == x.id_wilayah)?.nama_wilayah,
+                    // determine display name for jenis:
+                    Jenis = ResolveJenisDisplayName(x.id_jenis, jenisMapById, jenisMapByName),
                     x.Jumlah,
                     x.Tanggal,
                     x.Petugas
@@ -78,8 +107,27 @@ namespace cobaconnectdbonline
             if (dgvDataSampah.Columns.Contains("id_sampah"))
                 dgvDataSampah.Columns["id_sampah"].Visible = false;
 
+            // ensure combobox still contains allowed values
+            PopulateJenisCombo();
+
             // update chart after loading table data
             LoadChart();
+        }
+
+        private static string ResolveJenisDisplayName(string storedIdOrName, Dictionary<string, string> byId, Dictionary<string, string> byName)
+        {
+            if (string.IsNullOrWhiteSpace(storedIdOrName)) return string.Empty;
+
+            // if value matches an id -> return mapped name
+            if (byId.TryGetValue(storedIdOrName, out var nameFromId) && !string.IsNullOrWhiteSpace(nameFromId))
+                return nameFromId;
+
+            // if value matches a name (old data stored name directly) -> return as-is
+            if (byName.ContainsKey(storedIdOrName))
+                return storedIdOrName;
+
+            // fallback: return the original stored value
+            return storedIdOrName;
         }
 
         private void LoadChart()
@@ -100,35 +148,30 @@ namespace cobaconnectdbonline
                     return;
                 }
 
-                // get jenis mapping (id -> name)
                 var jenisList = db.JenisSampah.Find(_ => true).ToList();
-                var jenisMap = jenisList.ToDictionary(j => j.id_jenis, j => j.nama_jenis);
+                var jenisMap = jenisList.ToDictionary(j => j.id_jenis, j => j.nama_jenis, StringComparer.OrdinalIgnoreCase);
+                var jenisMapByName = jenisList.Where(j => !string.IsNullOrWhiteSpace(j.nama_jenis))
+                                      .ToDictionary(j => j.nama_jenis, j => j.id_jenis, StringComparer.OrdinalIgnoreCase);
 
-                // palette for jenis colors (extend if you have more jenis)
-                Color[] palette = new[]
-                {
-                    Color.SteelBlue,
-                    Color.Orange,
-                    Color.ForestGreen,
-                    Color.Purple,
-                    Color.Tomato,
-                    Color.Goldenrod,
-                    Color.DarkCyan,
-                    Color.MediumVioletRed
-                };
-
-                // distinct ordered dates (group by date part)
+                // distinct ordered dates
                 var dates = docs.Select(d => d.Tanggal.Date)
                                 .Distinct()
                                 .OrderBy(d => d)
                                 .ToList();
 
-                // sum by (date, id_jenis)
-                var sums = docs.GroupBy(d => new { Date = d.Tanggal.Date, d.id_jenis })
+                // sum grouped by (date, displayName) so different ids that map to same name are merged
+                var sums = docs.GroupBy(d => new
+                                {
+                                    Date = d.Tanggal.Date,
+                                    Name = ResolveJenisDisplayName(d.id_jenis, jenisMap, jenisMapByName)
+                                })
                                .ToDictionary(
-                                    g => (g.Key.Date, g.Key.id_jenis),
+                                    g => (g.Key.Date, g.Key.Name),
                                     g => g.Sum(x => x.Jumlah)
                                );
+
+                // distinct series names based on resolved display name
+                var seriesNames = sums.Keys.Select(k => k.Name).Distinct().ToList();
 
                 // chart area
                 var area = new ChartArea("MainArea");
@@ -142,18 +185,21 @@ namespace cobaconnectdbonline
 
                 chartSampah.Legends.Add(new Legend("Legend") { Docking = Docking.Top });
 
-                // create one series per jenis
-                var jenisIds = jenisList.Select(j => j.id_jenis).ToList();
-                if (jenisIds.Count == 0)
+                Color[] palette = new[]
                 {
-                    // fallback: create series from data's id_jenis distinct values
-                    jenisIds = docs.Select(d => d.id_jenis).Distinct().ToList();
-                }
+                    Color.SteelBlue,
+                    Color.Orange,
+                    Color.ForestGreen,
+                    Color.Purple,
+                    Color.Tomato,
+                    Color.Goldenrod,
+                    Color.DarkCyan,
+                    Color.MediumVioletRed
+                };
 
-                for (int i = 0; i < jenisIds.Count; i++)
+                for (int i = 0; i < seriesNames.Count; i++)
                 {
-                    var idJenis = jenisIds[i];
-                    var seriesName = jenisMap.ContainsKey(idJenis) ? jenisMap[idJenis] : idJenis;
+                    var seriesName = string.IsNullOrWhiteSpace(seriesNames[i]) ? "Unknown" : seriesNames[i];
                     var s = new Series(seriesName)
                     {
                         ChartType = SeriesChartType.Column,
@@ -161,14 +207,12 @@ namespace cobaconnectdbonline
                         IsValueShownAsLabel = true
                     };
 
-                    // color
                     s.Color = palette[i % palette.Length];
 
-                    // ensure points for every date (0 if none)
                     foreach (var date in dates)
                     {
                         double value = 0;
-                        if (sums.TryGetValue((date, idJenis), out double v))
+                        if (sums.TryGetValue((date, seriesName), out double v))
                             value = v;
 
                         int pointIndex = s.Points.AddXY(date.ToString("yyyy-MM-dd"), value);
@@ -178,7 +222,6 @@ namespace cobaconnectdbonline
                     chartSampah.Series.Add(s);
                 }
 
-                // rotate X labels when too many dates
                 if (dates.Count > 10)
                 {
                     chartSampah.ChartAreas["MainArea"].AxisX.LabelStyle.Angle = -45;
@@ -190,11 +233,33 @@ namespace cobaconnectdbonline
             }
         }
 
+        // Only create jenis documents for allowed values
+        private string GetOrCreateJenisId(string namaJenis)
+        {
+            if (string.IsNullOrWhiteSpace(namaJenis)) return null;
+
+            var normalized = namaJenis.Trim();
+            var match = AllowedJenis.FirstOrDefault(a => string.Equals(a, normalized, StringComparison.OrdinalIgnoreCase));
+            if (match == null) return null; // not allowed
+
+            var db = new Database();
+            var existing = db.JenisSampah.Find(j => j.nama_jenis.ToLower() == normalized.ToLower()).FirstOrDefault();
+            if (existing != null) return existing.id_jenis;
+
+            var newJenis = new JenisSampah
+            {
+                nama_jenis = match,
+                keterangan = string.Empty
+            };
+            db.JenisSampah.InsertOne(newJenis);
+            return newJenis.id_jenis;
+        }
+
         private void btnTambah_Click(object sender, EventArgs e)
         {
-            if (cmbWilayah.SelectedIndex == -1 || string.IsNullOrEmpty(txtJenis.Text))
+            if (cmbWilayah.SelectedIndex == -1 || cmbJenis.SelectedIndex == -1)
             {
-                MessageBox.Show("Wilayah dan jenis sampah wajib dipilih");
+                MessageBox.Show("Wilayah dan jenis sampah wajib dipilih/diisi");
                 return;
             }
 
@@ -204,10 +269,18 @@ namespace cobaconnectdbonline
                 return;
             }
 
+            var selectedJenisName = cmbJenis.SelectedItem.ToString();
+            var idJenis = GetOrCreateJenisId(selectedJenisName);
+            if (idJenis == null)
+            {
+                MessageBox.Show("Jenis tidak valid");
+                return;
+            }
+
             var data = new DataSampah
             {
                 id_wilayah = cmbWilayah.SelectedValue.ToString(),
-                id_jenis = txtJenis.Text,
+                id_jenis = idJenis,
                 Jumlah = jumlah,
                 Tanggal = dtTanggal.Value,
                 Petugas = txtPetugas.Text,
@@ -232,7 +305,11 @@ namespace cobaconnectdbonline
             cmbWilayah.Text = dgvDataSampah.Rows[e.RowIndex]
                 .Cells["Wilayah"].Value.ToString();
 
-            txtJenis.Text = dgvDataSampah.Rows[e.RowIndex].Cells["Jenis"].Value.ToString();
+            var jenisName = dgvDataSampah.Rows[e.RowIndex].Cells["Jenis"].Value?.ToString() ?? string.Empty;
+            // select matching item in combobox if exists
+            var item = cmbJenis.Items.Cast<object>().FirstOrDefault(x => string.Equals(x.ToString(), jenisName, StringComparison.OrdinalIgnoreCase));
+            if (item != null) cmbJenis.SelectedItem = item;
+            else cmbJenis.SelectedIndex = -1;
 
             txtJumlah.Text = dgvDataSampah.Rows[e.RowIndex]
                 .Cells["Jumlah"].Value.ToString();
@@ -252,14 +329,27 @@ namespace cobaconnectdbonline
                 return;
             }
 
+            if (cmbWilayah.SelectedIndex == -1 || cmbJenis.SelectedIndex == -1)
+            {
+                MessageBox.Show("Wilayah dan jenis sampah wajib dipilih/diisi");
+                return;
+            }
+
             var db = new Database();
+
+            var idJenis = GetOrCreateJenisId(cmbJenis.SelectedItem.ToString());
+            if (idJenis == null)
+            {
+                MessageBox.Show("Jenis tidak valid");
+                return;
+            }
 
             var filter = Builders<DataSampah>
                 .Filter.Eq(x => x.id_sampah, selectedId);
 
             var update = Builders<DataSampah>.Update
                 .Set(x => x.id_wilayah, cmbWilayah.SelectedValue.ToString())
-                .Set(x => x.id_jenis, txtJenis.Text)
+                .Set(x => x.id_jenis, idJenis)
                 .Set(x => x.Jumlah, Convert.ToDouble(txtJumlah.Text))
                 .Set(x => x.Tanggal, dtTanggal.Value)
                 .Set(x => x.Petugas, txtPetugas.Text);
@@ -299,7 +389,7 @@ namespace cobaconnectdbonline
         private void ClearForm()
         {
             cmbWilayah.SelectedIndex = -1;
-            txtJenis.Clear();
+            cmbJenis.SelectedIndex = -1;
             txtJumlah.Clear();
             txtPetugas.Clear();
             selectedId = null;

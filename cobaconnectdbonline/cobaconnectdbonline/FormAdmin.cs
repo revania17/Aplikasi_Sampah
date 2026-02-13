@@ -78,7 +78,7 @@ namespace cobaconnectdbonline
 
         private void btnChatBot_Click(object sender, EventArgs e)
         {
-            LoadForm(new FormChatbot(), sender);
+            LoadForm(new FormChatbot("Admin"), sender);
         }
 
         private void panelMain_Paint(object sender, PaintEventArgs e)

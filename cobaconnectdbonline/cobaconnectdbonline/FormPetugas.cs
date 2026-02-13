@@ -52,7 +52,7 @@ namespace cobaconnectdbonline
 
         private void btnChatBot_Click(object sender, EventArgs e)
         {
-            LoadForm(new FormChatbot(), sender);
+            LoadForm(new FormChatbot("Petugas"), sender);
         }
 
         private void btnDataSampah_Click(object sender, EventArgs e)

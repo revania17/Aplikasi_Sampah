@@ -54,22 +54,20 @@
             // 
             this.txtNama.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtNama.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNama.Location = new System.Drawing.Point(170, 220);
+            this.txtNama.Location = new System.Drawing.Point(170, 218);
             this.txtNama.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNama.Multiline = true;
             this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(293, 35);
+            this.txtNama.Size = new System.Drawing.Size(293, 32);
             this.txtNama.TabIndex = 0;
             // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(170, 298);
+            this.txtEmail.Location = new System.Drawing.Point(170, 301);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(293, 39);
+            this.txtEmail.Size = new System.Drawing.Size(293, 32);
             this.txtEmail.TabIndex = 1;
             // 
             // txtPassword
@@ -78,9 +76,8 @@
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(170, 393);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(293, 36);
+            this.txtPassword.Size = new System.Drawing.Size(293, 32);
             this.txtPassword.TabIndex = 3;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -102,7 +99,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(210, 191);
+            this.label1.Location = new System.Drawing.Point(210, 189);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(70, 19);
             this.label1.TabIndex = 6;
@@ -112,7 +109,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(210, 271);
+            this.label2.Location = new System.Drawing.Point(210, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 19);
             this.label2.TabIndex = 7;
@@ -163,7 +160,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::cobaconnectdbonline.Properties.Resources.user__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(169, 186);
+            this.pictureBox4.Location = new System.Drawing.Point(169, 182);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(35, 30);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -173,7 +170,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::cobaconnectdbonline.Properties.Resources.padlock__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(170, 355);
+            this.pictureBox3.Location = new System.Drawing.Point(170, 356);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(35, 30);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -185,7 +182,7 @@
             this.pictureBox2.ErrorImage = global::cobaconnectdbonline.Properties.Resources.email;
             this.pictureBox2.Image = global::cobaconnectdbonline.Properties.Resources.email;
             this.pictureBox2.InitialImage = global::cobaconnectdbonline.Properties.Resources.email;
-            this.pictureBox2.Location = new System.Drawing.Point(170, 267);
+            this.pictureBox2.Location = new System.Drawing.Point(170, 265);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(35, 30);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -198,7 +195,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label10.Location = new System.Drawing.Point(243, 109);
+            this.label10.Location = new System.Drawing.Point(243, 105);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(151, 44);
             this.label10.TabIndex = 11;
@@ -231,6 +228,7 @@
             // 
             // FormRegis
             // 
+            this.AcceptButton = this.btnRegis;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1300, 712);

@@ -35,6 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.chatPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelHistory = new System.Windows.Forms.Panel();
+            this.listHistory = new System.Windows.Forms.ListBox();
+            this.panelHistory.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtMessage
@@ -111,7 +114,7 @@
             // 
             this.chatPanel.AutoScroll = true;
             this.chatPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.chatPanel.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chatPanel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chatPanel.Location = new System.Drawing.Point(27, 74);
             this.chatPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chatPanel.Name = "chatPanel";
@@ -119,12 +122,33 @@
             this.chatPanel.TabIndex = 17;
             this.chatPanel.WrapContents = false;
             // 
+            // panelHistory
+            // 
+            this.panelHistory.Controls.Add(this.listHistory);
+            this.panelHistory.Location = new System.Drawing.Point(930, 74);
+            this.panelHistory.Name = "panelHistory";
+            this.panelHistory.Size = new System.Drawing.Size(314, 603);
+            this.panelHistory.TabIndex = 18;
+            // 
+            // listHistory
+            // 
+            this.listHistory.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.listHistory.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listHistory.FormattingEnabled = true;
+            this.listHistory.ItemHeight = 23;
+            this.listHistory.Location = new System.Drawing.Point(0, 3);
+            this.listHistory.Name = "listHistory";
+            this.listHistory.Size = new System.Drawing.Size(314, 602);
+            this.listHistory.TabIndex = 0;
+            this.listHistory.SelectedIndexChanged += new System.EventHandler(this.listHistory_SelectedIndexChanged);
+            // 
             // FormChatbot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1300, 712);
+            this.Controls.Add(this.panelHistory);
             this.Controls.Add(this.chatPanel);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.label1);
@@ -135,6 +159,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FormChatbot";
             this.Text = "Chatbot";
+            this.panelHistory.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,5 +173,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.FlowLayoutPanel chatPanel;
+        private System.Windows.Forms.Panel panelHistory;
+        private System.Windows.Forms.ListBox listHistory;
     }
 }
